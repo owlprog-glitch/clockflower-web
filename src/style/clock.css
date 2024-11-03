@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* Temas */
+/* Base */
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  transition: background-color 0.5s, color 0.5s ease;
+  position: relative;
+}
+
+/* Estilos para o relógio e data */
+.clock, .date, .season-calendar {
+  font-size: 2em;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Tema Cerejeira Amarela */
+.cherry-blossom-theme {
+  background-color: #FFF5DC;
+  color: #3B2911;
+}
+.cherry-blossom-theme .clock {
+  background-color: #FFE680;
+  color: #3B2911;
+}
+.cherry-blossom-theme .date {
+  background-color: #FFD966;
+  color: #3B2911;
+}
+.cherry-blossom-theme .season-calendar {
+  background-color: #E6B800;
+  color: white;
+}
+
+/* Tema Flor de Lótus */
+.lotus-theme {
+  background-color: #F9E5E3;
+  color: #C51E4E;
+}
+.lotus-theme .clock, .lotus-theme .date, .lotus-theme .season-calendar {
+  background-color: #F5B2C2;
+  color: white;
+}
+
+/* Tema Lírio da Aranha Azul */
+.blue-spider-lily-theme {
+  background-color: #E0F7FA;
+  color: #005D7F;
+}
+.blue-spider-lily-theme .clock, .blue-spider-lily-theme .date, .blue-spider-lily-theme .season-calendar {
+  background-color: #A1D6E9;
+  color: white;
+}
+
+/* Tema Lírio da Aranha Vermelha */
+.red-spider-lily-theme {
+  background-color: #FFEBEE;
+  color: #C62828;
+}
+.red-spider-lily-theme .clock, .red-spider-lily-theme .date, .red-spider-lily-theme .season-calendar {
+  background-color: #FF6F61;
+  color: white;
+}
+
+/* Estilos principais */
+.clock-container {
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tamanhos do relógio e data */
+#time {
+  font-size: 3em;
+}
+
+#date {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.season-display {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.2em;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0.2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.clock-display, .date-display {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+#theme-selector {
+  padding: 5px;
+  font-size: 1em;
+}
+
+/* Temas dinâmicos */
+body.default {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.cherry-blossom-theme {
+  background-color: #FFF5DC;
+  color: #3B2911;
+}
+
+body.lotus-theme {
+  background-color: #F9E5E3;
+  color: #C51E4E;
+}
+
+body.blue-spider-lily-theme {
+  background-color: #E0F7FA;
+  color: #005D7F;
+}
+
+body.red-spider-lily-theme {
+  background-color: #FFEBEE;
+  color: #C62828;
+}
+
+/* Estilos para as pétalas */
+#petal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  border-radius: 50% 50% 60% 60%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+.petal.cherry-blossom-theme {
+  background-color: #FFDD44;
+}
+
+.petal.lotus-theme {
+  background-color: #FFC0CB;
+}
+
+.petal.blue-spider-lily-theme {
+  background-color: #87CEEB;
+}
+
+.petal.red-spider-lily-theme {
+  background-color: #FF4500;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=clock.css.map */

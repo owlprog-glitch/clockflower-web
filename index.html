@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/clock.css">
+    
+    <title>Relógio Sanzonal</title>
+</head>
+<body>
+
+    <div class="clock-container">
+        <div id="time" class="time-display"></div>
+        <div id="date" class="date-display"></div>
+        <div id="season" class="season-display"></div>
+
+    </div>
+
+    <select id="theme-selector">
+        <option value="default">Tema Padrão</option>
+        <option value="cherry-blossom-theme">Cerejeira Amarela</option>
+        <option value="lotus-theme">Flor de lótus</option>
+        <option value="blue-spider-lily-theme">Lírio da Aranha Azul</option>
+        <option value="red-spider-lily-theme">Lírio da Aranha Vermelha</option>
+    </select>
+
+    <div id="petal-container">
+        <div class="petal cerejeira-amarela"></div>
+        <div class="petal flor-de-lotus"></div>
+        <div class="petal lirio-da-aranha-azul"></div>
+        <div class="petal lirio-da-aranha-vermelha"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!--Link em arquivo-->
+    <script src="src/scripts/clock.js"></script>
+    <script src="src/scripts/petals.js"></script>
+
+</body>
+</html>
